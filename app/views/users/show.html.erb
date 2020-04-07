@@ -5,4 +5,10 @@
     </div>
 </div>
 <h4 class="text-center mt-4"><%= @user.username %>'s articles </h4>   
-<%= render 'articles/article', obj: @user.articles %>
+<%= render 'articles/article', obj: @user_articles %>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"> <%= will_paginate @user_articles, class: "page-link font-weight-normal "%></li>
+  </ul>
+</nav>

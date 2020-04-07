@@ -12,3 +12,9 @@
       </div> 
     <% end %>
 </div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"> <%= will_paginate @users, class: "page-link font-weight-normal "%></li>
+  </ul>
+</nav>
