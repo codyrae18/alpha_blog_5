@@ -1,11 +1,17 @@
 <h2 class="text-center mt-4"><%= @article.title %></h2>
-  <div class="container">
+  <div class="container"> 
+  
       <div class="row justify-content-md-center">
         <div class="col-8 mt-4">
           <div class="card text-center shadow mb-5 bg-white rounded">
-            <div class="card-header font-italic">
-              by Cody Lawdermilt
-            </div>
+            <ul class="listing">
+              <li>Created by: </li>
+              <li><%= link_to gravatar_for(@article.user), user_path(@article.user) %></li>
+              <li class="article-title">
+              <%= link_to @article.user.username, user_path(@article.user) %>
+              </li>
+              <li><small><%= pluralize(@article.user.articles.count, "article") if @article.user.articles %> </small> </li>
+            </ul>
             <div class="card-body">
               <div class="card-text text-left"><%= simple_format(@article.description) %></div>
               <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
