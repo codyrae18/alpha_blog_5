@@ -1,5 +1,3 @@
-
-<div class="container">
 <h1 class="text-center mt-4 mb-3">Login</h1>
 
 <div class="container">
@@ -23,11 +21,12 @@
         <div class="form-group row justify-content-center">
           <%= form.submit "Login", class:"btn btn-outline-light btn-lg" %>
         </div>
+        
         <% end %>
-      </div>
+        
+        <div class="mb-3">
+          <%= link_to '[ Back ]', articles_path, class: "text-secondary row justify-content-center" %>
+        </div>
+      </div>  
     </div>
-    <div class="mb-3">
-      <%= link_to '[ Back ]', articles_path, class: "text-secondary row justify-content-center" %>
-    </div>
-</div>
 </div>
