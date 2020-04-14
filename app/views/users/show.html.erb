@@ -1,9 +1,11 @@
 <h1 class="text-center mt-4"> Welcome to <%= @user.username %>'s page </h1>
 <div class="container">
     <div class="row justify-content-md-center">
-    <%= gravatar_for @user, size: 150%>
-    <%= render 'articles/article', obj: @user_articles %>
-    <h4 class="text-center mt-4"><%= @user.username %>'s articles </h4>   
+      <div class="col-4 mt-2">
+        <%= gravatar_for @user, size: "150"%>
+        <h4 class=" mt-4"><%= @user.username %>'s articles </h4>   
+      </div>
+         <%= render 'articles/article', obj: @user_articles %>
     </div>
 </div>
 
