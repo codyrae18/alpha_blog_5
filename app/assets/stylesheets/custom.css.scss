@@ -22,15 +22,27 @@
 }
 
 h1 {
-  color: white;
+  color: rgb(0, 0, 0);
+}
+
+#home-container-t {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+#login-f {
+  color: black;
 }
 
 #home-container {
-  margin-top: 25px;
+  margin-top: 30px;
 }
-
+#home-container-l {
+  color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+}
 .jumbotron {
-  background-image: asset-url("jumbo-copyy.jpg");
+  background-image: asset-url("simple.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
